@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(252, 252, 252);
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 0;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px gainsboro;
+
+    a{ 
+        text-decoration: none;
+        color: black;
+        font-family: 'Hurricane', cursive;
+        font-size: 1.7em;
+    }
+
+    a:hover {
+        color: red;
+    }
+}
+
+
+.Post_Renderer {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 100px;
+
+    .Post_Preview {
+        border-radius: 10px;
+        margin: auto;
+        width: 70%;
+        text-align: center;
+        font-family: 'EB Garamond', serif;
+        box-shadow: 4px 4px 4px gainsboro;
+        border-top: 1px solid gainsboro;
+        border-left: 1px solid gainsboro;
+
+        .Post_Thumbnail {
+            height: 500px;
+        }
+
+        .Post_Details {
+            border-top: 1px solid gray;
+            padding: 8px;
+            padding-top: 5%;
+
+            a{
+                font-size: 2em;
+                text-decoration: none;
+                color: black;
+            }
+
+            a:hover {
+                color: rgb(153, 6, 6);
+            }
+
+            div {
+                margin: auto;
+                margin-top: 6px;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: bold;
+                color: gray;
+            }
+        }
+    }
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 10%;
+    border-top: 1px solid gainsboro;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        font-family: 'EB Garamond', serif;
+
+        a{
+            text-decoration: none;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            li {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    nav {
+        width: 95%;
+    }
+
+    .Post_Renderer {
+        width: 100%;
+
+        .Post_Preview {
+            width: 95%;
+        }
+    }
+
+    footer {
+        grid-template-columns: 100%;
+    }
+}
